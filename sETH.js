@@ -14,7 +14,7 @@ const { Keypair } = require('@solana/web3.js')
 const fs = require('fs')
 
 // 连接站点
-// const umi = createUmi('https://api.devnet.solana.com')
+const umi = createUmi('https://api.devnet.solana.com')
 // const umi = createUmi('https://api.mainnet-beta.solana.com')
 
 // 读取本地私钥文件
@@ -31,9 +31,9 @@ const singer = createSignerFromKeypair(umi, wallet)
 
 // 定义元数据
 const metadata = {
-  name: 'TLL',
-  symbol: 'TLL',
-  uri: 'https://magenta-brilliant-elephant-946.mypinata.cloud/ipfs/QmbLAgD1HYqPn6SsdpAZEenEPRbkY7SvoFVPF8v2GKRXLi'
+  name: 'sETH',
+  symbol: 'sETH',
+  uri: 'https://magenta-brilliant-elephant-946.mypinata.cloud/ipfs/Qma7QUHqKmVbZM22dSkBBu3fArCEnKVnt8NvncfNECZNSF'
 }
 
 // 配置umi的签名者和元数据
@@ -50,7 +50,7 @@ createAndMint(umi, {
   uri: metadata.uri,
   sellerFeeBasisPoints: percentAmount(0),
   decimals: 9,
-  amount: 10000000_000000000,
+  amount: 21000000_000000000,
   tokenOwner: wallet.publicKey,
   tokenStandard: TokenStandard.Fungible
 })
